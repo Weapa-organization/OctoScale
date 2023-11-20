@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/pngtree-alphabet-letter-v-with-ornaments-floral-vintage-png-image_2175237.jpg-32b7f6367674a956e41d39f5e2d61039.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://pngtree-alphabet-letter-v-with-ornaments-floral-vintage-png-image_2175237.jpg"
+dest_files=[ "res://.import/pngtree-alphabet-letter-v-with-ornaments-floral-vintage-png-image_2175237.jpg-32b7f6367674a956e41d39f5e2d61039.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

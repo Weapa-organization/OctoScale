@@ -1,0 +1,255 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Obstacle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Rope.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cabeza.gd" type="Script" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://p1.png" type="Texture" id=6]
+[ext_resource path="res://Players.gd" type="Script" id=7]
+[ext_resource path="res://Agarre.gd" type="Script" id=8]
+[ext_resource path="res://Agarres.gd" type="Script" id=9]
+[ext_resource path="res://AreaCabeza.gd" type="Script" id=10]
+[ext_resource path="res://png-transparent-letter-case-computer-icons-t-uuml-rkiye-miscellaneous-text-number.png" type="Texture" id=11]
+[ext_resource path="res://pngtree-black-latter-d-png-image_3135498.jpg" type="Texture" id=12]
+[ext_resource path="res://pngtree-alphabet-letter-v-with-ornaments-floral-vintage-png-image_2175237.jpg" type="Texture" id=13]
+[ext_resource path="res://pngtree-3d-letters-u-pink-color-elegant-design-png-image_5963088.jpg" type="Texture" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30.5, 31.5 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 447.004
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41.25, 40.75 )
+
+[node name="World" type="YSort"]
+
+[node name="Rope" parent="." instance=ExtResource( 3 )]
+position = Vector2( 559, 224 )
+tentaculo_name = "Player"
+
+[node name="Obstacle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 950, 481 )
+scale = Vector2( 6, 1 )
+
+[node name="Obstacle2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 203, 480 )
+
+[node name="Obstacle3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 272, 480 )
+
+[node name="Obstacle5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 600, 481 )
+scale = Vector2( 5, 1 )
+
+[node name="Obstacle6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 341, 480 )
+
+[node name="Obstacle4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 407, 481 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Rope2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 545, 206 )
+rotation = 1.57079
+tentaculo_name = "Player3"
+
+[node name="Rope3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 567, 211 )
+rotation = 2.35619
+tentaculo_name = "Player4"
+
+[node name="Rope4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 570, 219 )
+rotation = 3.66519
+tentaculo_name = "Player5"
+
+[node name="Players" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="Player" parent="Players" instance=ExtResource( 2 )]
+position = Vector2( 316, 209 )
+idx = 0
+
+[node name="Sprite" parent="Players/Player" index="0"]
+position = Vector2( -18, 5 )
+
+[node name="CollisionShape2D" parent="Players/Player" index="2"]
+position = Vector2( -19, 5 )
+
+[node name="RemoteTransform2D" parent="Players/Player" index="3"]
+position = Vector2( -15, 7 )
+
+[node name="Position2D" parent="Players/Player" index="4"]
+position = Vector2( -17, 8 )
+
+[node name="Player3" parent="Players" instance=ExtResource( 2 )]
+position = Vector2( 572, -87 )
+
+[node name="Sprite" parent="Players/Player3" index="0"]
+position = Vector2( -15, -4 )
+
+[node name="VectorDrawer" parent="Players/Player3" index="1"]
+position = Vector2( 3, -9 )
+
+[node name="CollisionShape2D" parent="Players/Player3" index="2"]
+position = Vector2( -16, -4 )
+
+[node name="RemoteTransform2D" parent="Players/Player3" index="3"]
+position = Vector2( -17, 5 )
+
+[node name="Position2D" parent="Players/Player3" index="4"]
+position = Vector2( -9, 1 )
+
+[node name="Player4" parent="Players" instance=ExtResource( 2 )]
+position = Vector2( 803, 8 )
+idx = 2
+
+[node name="Sprite" parent="Players/Player4" index="0"]
+position = Vector2( -17, 5 )
+
+[node name="VectorDrawer" parent="Players/Player4" index="1"]
+position = Vector2( 1, 0 )
+
+[node name="CollisionShape2D" parent="Players/Player4" index="2"]
+position = Vector2( -18, 5 )
+
+[node name="RemoteTransform2D" parent="Players/Player4" index="3"]
+position = Vector2( -17, 5 )
+
+[node name="Position2D" parent="Players/Player4" index="4"]
+position = Vector2( 1, -16 )
+
+[node name="Player5" parent="Players" instance=ExtResource( 2 )]
+position = Vector2( 835, 370 )
+idx = 3
+
+[node name="Sprite" parent="Players/Player5" index="0"]
+position = Vector2( -17, 5 )
+
+[node name="VectorDrawer" parent="Players/Player5" index="1"]
+position = Vector2( 1, 0 )
+
+[node name="CollisionShape2D" parent="Players/Player5" index="2"]
+position = Vector2( -18, 5 )
+
+[node name="RemoteTransform2D" parent="Players/Player5" index="3"]
+position = Vector2( -17, 5 )
+
+[node name="Position2D" parent="Players/Player5" index="4"]
+position = Vector2( 1, -16 )
+
+[node name="Cabeza" type="KinematicBody2D" parent="."]
+position = Vector2( 561, 215 )
+script = ExtResource( 4 )
+
+[node name="Position2D" type="Position2D" parent="Cabeza"]
+position = Vector2( 1, 5 )
+
+[node name="Sprite" type="Sprite" parent="Cabeza"]
+position = Vector2( -2, 2 )
+texture = ExtResource( 5 )
+
+[node name="p" type="Sprite" parent="Cabeza/Sprite"]
+texture = ExtResource( 6 )
+offset = Vector2( 0, -40 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza"]
+position = Vector2( -3, 1 )
+shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="Cabeza"]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Cabeza"]
+position = Vector2( 0, -1 )
+update_rotation = false
+update_scale = false
+
+[node name="Area2D" type="Area2D" parent="Cabeza"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza/Area2D"]
+position = Vector2( -3, 6 )
+shape = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="Cabeza"]
+physics_interpolation_mode = 2
+current = true
+
+[node name="Agarres" type="Node2D" parent="."]
+position = Vector2( 311, 20 )
+z_index = -1
+script = ExtResource( 9 )
+
+[node name="Agarre1" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 100, 293 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_t"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre1"]
+position = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre1"]
+position = Vector2( 2, -2 )
+scale = Vector2( 0.0896739, 0.149414 )
+texture = ExtResource( 11 )
+
+[node name="Agarre2" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 637, 181 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_u"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre2"]
+position = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre2"]
+position = Vector2( 4, 2 )
+scale = Vector2( 0.0698369, 0.079707 )
+texture = ExtResource( 14 )
+
+[node name="Agarre3" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 391, 143 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_v"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre3"]
+position = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre3"]
+position = Vector2( 0.499993, -3 )
+scale = Vector2( 0.230556, 0.194444 )
+texture = ExtResource( 13 )
+
+[node name="Agarre4" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 92, -30 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_d"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre4"]
+position = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre4"]
+position = Vector2( -3.50001, 5.05273 )
+scale = Vector2( 0.191667, 0.188596 )
+texture = ExtResource( 12 )
+
+[connection signal="body_entered" from="Cabeza/Area2D" to="Cabeza/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Cabeza/Area2D" to="Cabeza/Area2D" method="_on_Area2D_body_exited"]
+
+[editable path="Players/Player"]
+[editable path="Players/Player3"]
+[editable path="Players/Player4"]
+[editable path="Players/Player5"]
