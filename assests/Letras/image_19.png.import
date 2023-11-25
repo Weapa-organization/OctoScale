@@ -2,25 +2,25 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset_water.png-eea3e797cc85ad0a7312a450f701d355.stex"
+path="res://.import/image_19.png-d9449af30a217d1b9801c67a306a515f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Tilesets/tileset_water.png"
-dest_files=[ "res://.import/tileset_water.png-eea3e797cc85ad0a7312a450f701d355.stex" ]
+source_file="res://assests/Letras/image_19.png"
+dest_files=[ "res://.import/image_19.png-d9449af30a217d1b9801c67a306a515f.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

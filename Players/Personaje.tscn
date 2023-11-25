@@ -262,7 +262,6 @@ node_b = NodePath("../Cuerda4/BrazoSegment4")
 [node name="Mano4" type="RigidBody2D" parent="."]
 position = Vector2( 160, -119 )
 rotation = 2.55753
-mode = 1
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mano4"]
@@ -290,3 +289,8 @@ shape = SubResource( 1 )
 rotation = -1.5861
 scale = Vector2( 4.3017, 4.011 )
 texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="Cabeza"]
+position = Vector2( -255.894, 8.91705 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
