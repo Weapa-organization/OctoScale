@@ -20,8 +20,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Kinematic2DRope Demo"
-run/main_scene="res://World.tscn"
+config/name="OctoScale"
+run/main_scene="res://Worlds/World_2.tscn"
 config/icon="res://icon2.png"
 
 [display]

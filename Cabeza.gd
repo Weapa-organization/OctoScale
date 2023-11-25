@@ -39,12 +39,12 @@ func process_agarres():
 							print_debug("TENEMOS BRAZO CERCANO")
 							distancia_cercana = distancia_brazo
 							brazo_cercano = brazo
-				
-				brazo_cercano.coger_agarre(agarre.global_position) # Metodo del brazo para moverse hasta la posicion del objeto agarre
-				agarre.is_agarrado=true
-				agarre.brazo = brazo_cercano
+				if brazo_cercano != null:
+					brazo_cercano.coger_agarre(agarre.global_position) # Metodo del brazo para moverse hasta la posicion del objeto agarre
+					agarre.is_agarrado=true
+					agarre.brazo = brazo_cercano
 			# Movemos al jugador
 			
-		if Input.is_action_just_released(agarre.tecla):
+		if Input.is_action_just_released(agarre.tecla) and agarre.is_agarrado:
 			agarre.is_agarrado = false
 			agarre.brazo.is_agarrando = false
