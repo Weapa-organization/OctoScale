@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Obstacle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -14,15 +14,21 @@
 [ext_resource path="res://pngtree-black-latter-d-png-image_3135498.jpg" type="Texture" id=12]
 [ext_resource path="res://pngtree-alphabet-letter-v-with-ornaments-floral-vintage-png-image_2175237.jpg" type="Texture" id=13]
 [ext_resource path="res://pngtree-3d-letters-u-pink-color-elegant-design-png-image_5963088.jpg" type="Texture" id=14]
+[ext_resource path="res://y.jpg" type="Texture" id=15]
+[ext_resource path="res://Opera_O.png" type="Texture" id=16]
+[ext_resource path="res://h.jpg" type="Texture" id=17]
+[ext_resource path="res://j.jpg" type="Texture" id=18]
+[ext_resource path="res://p.png" type="Texture" id=19]
+[ext_resource path="res://r.png" type="Texture" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 31.5 )
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 447.004
+radius = 391.155
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 41.25, 40.75 )
+extents = Vector2( 46.625, 40.75 )
 
 [node name="World" type="YSort"]
 
@@ -72,6 +78,7 @@ script = ExtResource( 7 )
 
 [node name="Player" parent="Players" instance=ExtResource( 2 )]
 position = Vector2( 316, 209 )
+collision_mask = 1
 idx = 0
 
 [node name="Sprite" parent="Players/Player" index="0"]
@@ -88,6 +95,7 @@ position = Vector2( -17, 8 )
 
 [node name="Player3" parent="Players" instance=ExtResource( 2 )]
 position = Vector2( 572, -87 )
+collision_mask = 1
 
 [node name="Sprite" parent="Players/Player3" index="0"]
 position = Vector2( -15, -4 )
@@ -106,6 +114,7 @@ position = Vector2( -9, 1 )
 
 [node name="Player4" parent="Players" instance=ExtResource( 2 )]
 position = Vector2( 803, 8 )
+collision_mask = 1
 idx = 2
 
 [node name="Sprite" parent="Players/Player4" index="0"]
@@ -125,6 +134,7 @@ position = Vector2( 1, -16 )
 
 [node name="Player5" parent="Players" instance=ExtResource( 2 )]
 position = Vector2( 835, 370 )
+collision_mask = 1
 idx = 3
 
 [node name="Sprite" parent="Players/Player5" index="0"]
@@ -144,6 +154,8 @@ position = Vector2( 1, -16 )
 
 [node name="Cabeza" type="KinematicBody2D" parent="."]
 position = Vector2( 561, 215 )
+z_index = 10
+collision_layer = 16
 script = ExtResource( 4 )
 
 [node name="Position2D" type="Position2D" parent="Cabeza"]
@@ -174,7 +186,7 @@ collision_mask = 4
 script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza/Area2D"]
-position = Vector2( -3, 6 )
+position = Vector2( -2, 4 )
 shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Cabeza"]
@@ -187,7 +199,7 @@ z_index = -1
 script = ExtResource( 9 )
 
 [node name="Agarre1" type="StaticBody2D" parent="Agarres"]
-position = Vector2( 100, 293 )
+position = Vector2( 78, 339 )
 collision_layer = 4
 script = ExtResource( 8 )
 tecla = "tecla_t"
@@ -245,6 +257,96 @@ shape = SubResource( 2 )
 position = Vector2( -3.50001, 5.05273 )
 scale = Vector2( 0.191667, 0.188596 )
 texture = ExtResource( 12 )
+
+[node name="Agarre5" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 484, -154 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_o"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre5"]
+position = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre5"]
+position = Vector2( -2.99951, 6 )
+scale = Vector2( 0.0903336, 0.0843507 )
+texture = ExtResource( 16 )
+
+[node name="Agarre6" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 239, -242 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_h"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre6"]
+position = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre6"]
+position = Vector2( 8, 1 )
+scale = Vector2( 0.466945, 0.414532 )
+texture = ExtResource( 17 )
+
+[node name="Agarre7" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 540, -340 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_y"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre7"]
+position = Vector2( 4, -5 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre7"]
+position = Vector2( 6, -2 )
+scale = Vector2( 0.244445, 0.216667 )
+texture = ExtResource( 15 )
+
+[node name="Agarre8" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 64, -328 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_r"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre8"]
+position = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre8"]
+position = Vector2( -10, 2 )
+scale = Vector2( 0.125, 0.137734 )
+texture = ExtResource( 20 )
+
+[node name="Agarre9" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 262, -394 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre9"]
+position = Vector2( 7.99998, -5 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre9"]
+position = Vector2( 6, -5 )
+scale = Vector2( 0.380278, 0.329853 )
+texture = ExtResource( 18 )
+
+[node name="Agarre10" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 248, -663 )
+collision_layer = 4
+script = ExtResource( 8 )
+tecla = "tecla_p"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre10"]
+position = Vector2( -3, 7 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Agarres/Agarre10"]
+position = Vector2( -3, 12 )
+scale = Vector2( 0.234929, 0.203348 )
+texture = ExtResource( 19 )
 
 [connection signal="body_entered" from="Cabeza/Area2D" to="Cabeza/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Cabeza/Area2D" to="Cabeza/Area2D" method="_on_Area2D_body_exited"]
