@@ -28,7 +28,7 @@ margin_right = 1255.0
 margin_bottom = 290.0
 focus_neighbour_top = NodePath("../QuitButton")
 theme = ExtResource( 2 )
-text = "Singleplayer"
+text = "Pulpo"
 
 [node name="MultiplayerButton" type="Button" parent="."]
 margin_left = 665.0
@@ -36,7 +36,7 @@ margin_top = 455.0
 margin_right = 1255.0
 margin_bottom = 610.0
 theme = ExtResource( 2 )
-text = "Multiplayer"
+text = "Monillo"
 
 [node name="QuitButton" type="Button" parent="."]
 margin_left = 665.0

@@ -1,12 +1,16 @@
-[gd_resource type="Theme" load_steps=5 format=2]
+[gd_resource type="Theme" load_steps=6 format=2]
 
 [ext_resource path="res://Menu/m_hover.tres" type="StyleBox" id=1]
 [ext_resource path="res://Menu/m_normal.tres" type="StyleBox" id=2]
 [ext_resource path="res://Menu/m_pressed.tres" type="StyleBox" id=3]
-[ext_resource path="res://Menu/Poco.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Menu/KimsBitHand.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 92
+font_data = ExtResource( 4 )
 
 [resource]
-Button/fonts/font = ExtResource( 4 )
+Button/fonts/font = SubResource( 1 )
 Button/styles/hover = ExtResource( 1 )
 Button/styles/normal = ExtResource( 2 )
 Button/styles/pressed = ExtResource( 3 )
