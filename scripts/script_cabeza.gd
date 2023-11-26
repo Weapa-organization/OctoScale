@@ -14,6 +14,7 @@ func _ready():
 
 func _physics_process(_delta):
 	
+	rotation_degrees = 90
 	var dir = Vector2()
 	
 	agarres = $Area2D.bodies
