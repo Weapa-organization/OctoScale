@@ -569,14 +569,14 @@ scale = Vector2( 11.6328, 12.9883 )
 z_index = -4
 texture = ExtResource( 12 )
 
-[node name="WaterA8Frames" type="Sprite" parent="Escenario"]
+[node name="Sky" type="Sprite" parent="Escenario"]
 modulate = Color( 0.435294, 0.713726, 0.92549, 1 )
 position = Vector2( 913, 1521 )
 scale = Vector2( 13.6893, 36.1911 )
 z_index = -1
 texture = ExtResource( 13 )
 
-[node name="WaterA8Frames2" type="Sprite" parent="Escenario"]
+[node name="Water" type="Sprite" parent="Escenario"]
 position = Vector2( 1095, 733 )
 scale = Vector2( 12.069, -32.0337 )
 z_index = -6
