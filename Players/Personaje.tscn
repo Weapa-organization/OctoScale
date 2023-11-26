@@ -12,7 +12,6 @@
 extents = Vector2( 56.875, 50 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 14.979
 
 [node name="Personaje" type="Node2D"]
 
