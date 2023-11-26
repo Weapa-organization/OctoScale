@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assests/Objects/banana.png" type="Texture" id=1]
 [ext_resource path="res://assests/Objects/apple.png" type="Texture" id=2]
@@ -6,12 +6,12 @@
 [ext_resource path="res://BrazoSegment.tscn" type="PackedScene" id=4]
 [ext_resource path="res://AreaCabeza.gd" type="Script" id=5]
 [ext_resource path="res://scripts/script_cabeza.gd" type="Script" id=6]
+[ext_resource path="res://scripts/move_camera.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 56.875, 50 )
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 391.155
+[sub_resource type="CapsuleShape2D" id=2]
 
 [node name="Personaje" type="Node2D"]
 
@@ -77,25 +77,8 @@ collision_mask = 0
 
 [node name="PinJoint2D3" type="PinJoint2D" parent="."]
 position = Vector2( 200, 0 )
-node_a = NodePath("../Mano1")
+node_a = NodePath("../Manos/Mano1")
 node_b = NodePath("../Cuerda/BrazoSegment4")
-
-[node name="Mano1" type="RigidBody2D" parent="."]
-position = Vector2( 205, 0 )
-rotation = -3.11099
-gravity_scale = 2.0
-script = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mano1"]
-position = Vector2( 0.511417, 0.742256 )
-rotation = -1.5861
-scale = Vector2( 0.150051, 0.208057 )
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Mano1"]
-rotation = -1.5861
-scale = Vector2( 1.375, 1.3125 )
-texture = ExtResource( 1 )
 
 [node name="Cuerda2" type="RigidBody2D" parent="."]
 position = Vector2( 17, 0 )
@@ -139,26 +122,8 @@ collision_mask = 0
 
 [node name="PinJoint2D4" type="PinJoint2D" parent="."]
 position = Vector2( -180, 2 )
-node_a = NodePath("../Mano2")
+node_a = NodePath("../Manos/Mano2")
 node_b = NodePath("../Cuerda2/BrazoSegment4")
-
-[node name="Mano2" type="RigidBody2D" parent="."]
-position = Vector2( -183, 1 )
-rotation = 0.0755532
-collision_layer = 2
-collision_mask = 2
-gravity_scale = 2.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mano2"]
-position = Vector2( 0.511417, 0.742256 )
-rotation = -1.5861
-scale = Vector2( 0.17938, 0.202885 )
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Mano2"]
-rotation = -1.5861
-scale = Vector2( 1.375, 1.3125 )
-texture = ExtResource( 1 )
 
 [node name="Cuerda3" type="RigidBody2D" parent="."]
 position = Vector2( -1.52588e-05, -1 )
@@ -203,26 +168,8 @@ collision_mask = 0
 [node name="PinJoint2D6" type="PinJoint2D" parent="."]
 position = Vector2( -156, -119 )
 rotation = 2.22081
-node_a = NodePath("../Mano3")
+node_a = NodePath("../Manos/Mano3")
 node_b = NodePath("../Cuerda3/BrazoSegment4")
-
-[node name="Mano3" type="RigidBody2D" parent="."]
-position = Vector2( -160, -124 )
-rotation = 0.737662
-collision_layer = 4
-collision_mask = 4
-gravity_scale = 2.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mano3"]
-position = Vector2( 0.511417, 0.742256 )
-rotation = -1.5861
-scale = Vector2( 0.17938, 0.202885 )
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Mano3"]
-rotation = -1.5861
-scale = Vector2( 1.375, 1.3125 )
-texture = ExtResource( 1 )
 
 [node name="Cuerda4" type="RigidBody2D" parent="."]
 position = Vector2( 7.62939e-06, 6.99999 )
@@ -267,32 +214,105 @@ collision_mask = 0
 [node name="PinJoint2D7" type="PinJoint2D" parent="."]
 position = Vector2( 155, -117 )
 rotation = -1.84156
-node_a = NodePath("../Mano4")
+node_a = NodePath("../Manos/Mano4")
 node_b = NodePath("../Cuerda4/BrazoSegment4")
 
-[node name="Mano4" type="RigidBody2D" parent="."]
+[node name="Manos" type="Node2D" parent="."]
+
+[node name="Mano1" type="RigidBody2D" parent="Manos"]
+position = Vector2( 205, 0 )
+rotation = -3.11099
+gravity_scale = 2.0
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Manos/Mano1"]
+position = Vector2( 0.511417, 0.742256 )
+rotation = -1.5861
+scale = Vector2( 0.150051, 0.208057 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Manos/Mano1"]
+visible = false
+rotation = -1.5861
+scale = Vector2( 1.375, 1.3125 )
+texture = ExtResource( 1 )
+
+[node name="Tween" type="Tween" parent="Manos/Mano1"]
+
+[node name="Mano2" type="RigidBody2D" parent="Manos"]
+position = Vector2( -183, 1 )
+rotation = 0.0755532
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 2.0
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Manos/Mano2"]
+position = Vector2( 0.511417, 0.742256 )
+rotation = -1.5861
+scale = Vector2( 0.17938, 0.202885 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Manos/Mano2"]
+visible = false
+rotation = -1.5861
+scale = Vector2( 1.375, 1.3125 )
+texture = ExtResource( 1 )
+
+[node name="Tween" type="Tween" parent="Manos/Mano2"]
+
+[node name="Mano3" type="RigidBody2D" parent="Manos"]
+position = Vector2( -160, -124 )
+rotation = 0.737662
+collision_layer = 4
+collision_mask = 4
+gravity_scale = 2.0
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Manos/Mano3"]
+position = Vector2( 0.511417, 0.742256 )
+rotation = -1.5861
+scale = Vector2( 0.17938, 0.202885 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Manos/Mano3"]
+visible = false
+rotation = -1.5861
+scale = Vector2( 1.375, 1.3125 )
+texture = ExtResource( 1 )
+
+[node name="Tween" type="Tween" parent="Manos/Mano3"]
+
+[node name="Mano4" type="RigidBody2D" parent="Manos"]
 position = Vector2( 160, -119 )
 rotation = 2.55753
 collision_layer = 8
 collision_mask = 8
-gravity_scale = 0.0
+gravity_scale = 2.0
+script = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mano4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Manos/Mano4"]
 position = Vector2( 0.511414, 0.742256 )
 rotation = -1.5861
 scale = Vector2( 0.17938, 0.202885 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Mano4"]
+[node name="Sprite" type="Sprite" parent="Manos/Mano4"]
+visible = false
 rotation = -1.5861
 scale = Vector2( 1.375, 1.3125 )
 texture = ExtResource( 1 )
 
+[node name="Tween" type="Tween" parent="Manos/Mano4"]
+
 [node name="Cabeza" type="RigidBody2D" parent="."]
 position = Vector2( 5.00002, 2.38419e-07 )
 rotation = 1.5861
+scale = Vector2( 1, 1 )
 collision_layer = 16
 collision_mask = 16
+mass = 10.2041
+gravity_scale = 5.0
 script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza"]
@@ -306,23 +326,26 @@ rotation = -1.5861
 scale = Vector2( 4.3017, 4.011 )
 texture = ExtResource( 2 )
 
-[node name="Camera2D" type="Camera2D" parent="Cabeza"]
-position = Vector2( -255.894, 8.91705 )
-current = true
-zoom = Vector2( 0.6, 0.6 )
-
 [node name="Area2D" type="Area2D" parent="Cabeza"]
 position = Vector2( -0.0459091, -2.99963 )
 rotation = -1.5861
-scale = Vector2( 0.315616, 0.392607 )
-collision_layer = 4
-collision_mask = 4
+scale = Vector2( 0.414439, 0.512686 )
+collision_layer = 256
+collision_mask = 256
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza/Area2D"]
-position = Vector2( -2, 4 )
-scale = Vector2( 1.63169, 1.37089 )
+position = Vector2( -1.90735e-06, -93.6246 )
+scale = Vector2( 48.2325, 18.096 )
 shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2.57492e-05, -256 )
+rotation = 1.5861
+scale = Vector2( 1, 1 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
+script = ExtResource( 7 )
 
 [connection signal="body_entered" from="Cabeza/Area2D" to="Cabeza/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Cabeza/Area2D" to="Cabeza/Area2D" method="_on_Area2D_body_exited"]
