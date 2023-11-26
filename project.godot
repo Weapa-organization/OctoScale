@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="OctoScale"
-run/main_scene="res://Worlds/World_2.tscn"
+run/main_scene="res://Menu/Menu.tscn"
 config/icon="res://icon2.png"
 
 [display]

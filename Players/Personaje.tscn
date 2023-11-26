@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 56.875, 50 )
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=2]
 
 [node name="Personaje" type="Node2D"]
 
@@ -406,17 +406,16 @@ scale = Vector2( 4.3017, 4.011 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="Cabeza"]
-visible = false
 position = Vector2( -0.0459091, -2.99963 )
 rotation = -1.5861
-scale = Vector2( 0.414439, 0.512686 )
+scale = Vector2( 0.608468, 0.529318 )
 collision_layer = 256
 collision_mask = 256
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza/Area2D"]
 position = Vector2( -1.90735e-06, -93.6246 )
-scale = Vector2( 48.2325, 18.096 )
+scale = Vector2( 49.6797, 45.2765 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
