@@ -201,7 +201,7 @@ z_index = -1
 script = ExtResource( 9 )
 
 [node name="Agarre1" type="StaticBody2D" parent="Agarres"]
-position = Vector2( 78, 339 )
+position = Vector2( 249, 334 )
 collision_layer = 4
 script = ExtResource( 8 )
 tecla = "tecla_t"
