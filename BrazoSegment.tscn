@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assests/Objects/ladder.png" type="Texture" id=1]
+[ext_resource path="res://tiles/pulpo tentaculo 2.png" type="Texture" id=1]
+[ext_resource path="res://BrazoSegment.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
@@ -8,10 +9,13 @@ height = 44.0
 
 [node name="BrazoSegment" type="RigidBody2D"]
 position = Vector2( 0, 1 )
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -3 )
+position = Vector2( 1.80157, 0.801574 )
+rotation = -3.11192
+scale = Vector2( 0.806194, 0.947031 )
 texture = ExtResource( 1 )
