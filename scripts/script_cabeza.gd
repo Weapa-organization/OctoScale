@@ -44,7 +44,7 @@ func process_agarres():
 					agarre.brazo = brazo_cercano
 					agarre.brazo.is_agarrando = true
 					agarre.is_agarrado = true
-					agarre.brazo.coger_agarre(agarre.global_position) # Metodo del brazo para moverse hasta la posicion del objeto agarre	
+					agarre.brazo.coger_agarre(agarre.global_position, agarre) # Metodo del brazo para moverse hasta la posicion del objeto agarre	
 			# Movemos al jugador
 			
 		if Input.is_action_just_released(agarre.tecla) and agarre.is_agarrado:
