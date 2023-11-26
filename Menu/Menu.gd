@@ -21,7 +21,7 @@ func _on_SingleplayerButton_pressed():
 
 
 func _on_MultiplayerButton_pressed():
-	get_tree().change_scene("res://World.tscn")
+	get_tree().change_scene("res://Worlds/World_3.tscn")
 
 
 func _on_QuitButton_pressed():
