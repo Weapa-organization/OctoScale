@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Menu/Menu.tres" type="Theme" id=1]
+[ext_resource path="res://tiles/fondofondo.jpg" type="Texture" id=2]
+[ext_resource path="res://Menu/escenario.tres" type="TileSet" id=3]
+[ext_resource path="res://Menu/fIN DEL JUEGO.gd" type="Script" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 969, 339 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="Foreground" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 65547, 30, 0, 65549, 27, 0, 65553, 28, 0, 131082, 3, 0, 131083, 4, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 6, 0, 196618, 17, 0, 196619, 20, 0, 196620, 20, 0, 196621, 20, 0, 196622, 20, 0, 196623, 20, 0, 196624, 20, 0, 196625, 20, 0, 196626, 20, 0, 196627, 10, 0, 262154, 24, 0, 262155, 22, 0, 262156, 21, 0, 262157, 11, 0, 262158, 11, 0, 262159, 21, 0, 262160, 11, 0, 262161, 21, 0, 262162, 21, 0, 262163, 12, 0, 393226, 26, 0, 393227, 26, 0, 393229, 28, 0, 393234, 29, 0, 458762, 3, 0, 458763, 4, 0, 458764, 4, 0, 458765, 4, 0, 458766, 4, 0, 458767, 4, 0, 458768, 4, 0, 458769, 4, 0, 458770, 4, 0, 458771, 6, 0, 524298, 17, 0, 524299, 20, 0, 524300, 20, 0, 524301, 20, 0, 524302, 20, 0, 524303, 20, 0, 524304, 20, 0, 524305, 20, 0, 524306, 20, 0, 524307, 10, 0, 589834, 24, 0, 589835, 22, 0, 589836, 11, 0, 589837, 22, 0, 589838, 21, 0, 589839, 22, 0, 589840, 21, 0, 589841, 21, 0, 589842, 11, 0, 589843, 12, 0, 720911, 30, 0, 720914, 27, 0, 786442, 3, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 9, 0, 851978, 17, 0, 851979, 20, 0, 851980, 20, 0, 851981, 20, 0, 851982, 20, 0, 851983, 20, 0, 851984, 20, 0, 851985, 20, 0, 851986, 20, 0, 851987, 10, 0, 917514, 24, 0, 917515, 23, 0, 917516, 11, 0, 917517, 21, 0, 917518, 11, 0, 917519, 11, 0, 917520, 11, 0, 917521, 11, 0, 917522, 21, 0, 917523, 12, 0 )
+
+[node name="FinJuego" type="Button" parent="."]
+margin_left = 665.0
+margin_top = 135.0
+margin_right = 1255.0
+margin_bottom = 290.0
+focus_neighbour_top = NodePath("../QuitButton")
+theme = ExtResource( 1 )
+text = "Fin del Nivel"
+
+[node name="SiguienteNivelButton" type="Button" parent="."]
+margin_left = 665.0
+margin_top = 455.0
+margin_right = 1255.0
+margin_bottom = 610.0
+theme = ExtResource( 1 )
+text = "Siguiente Nivel"
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 665.0
+margin_top = 775.0
+margin_right = 1255.0
+margin_bottom = 930.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbour_bottom = NodePath("../FinJuego")
+theme = ExtResource( 1 )
+text = "Quit"

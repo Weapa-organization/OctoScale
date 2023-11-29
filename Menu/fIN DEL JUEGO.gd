@@ -8,19 +8,14 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$SingleplayerButton.grab_focus()
+	$SiguienteNivelButton.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
-
-func _on_SingleplayerButton_pressed():
-	get_tree().change_scene("res://Worlds/World_1.tscn")
-
-
-func _on_MultiplayerButton_pressed():
+func _on_SiguienteNivelButton_pressed():
 	get_tree().change_scene("res://Worlds/World_3.tscn")
 
 
