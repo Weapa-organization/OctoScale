@@ -1,0 +1,298 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assests/UI/BitPotion Full Extended/BitPotionExt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://p1.png" type="Texture" id=2]
+[ext_resource path="res://Agarre.gd" type="Script" id=3]
+[ext_resource path="res://Worlds/Fondo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Players/Personaje.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 465, 29 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 46.625, 40.75 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 84
+font_data = ExtResource( 1 )
+
+[node name="World_1" type="Node"]
+
+[node name="Personaje" parent="." instance=ExtResource( 5 )]
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 31
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 13, 163 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+visible = false
+position = Vector2( 6, 5 )
+scale = Vector2( 1.375, 1.625 )
+texture = ExtResource( 2 )
+
+[node name="Agarres" type="Node2D" parent="."]
+
+[node name="Agarre1" type="StaticBody2D" parent="Agarres"]
+position = Vector2( -45, 11 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+is_final = true
+tecla = "tecla_t"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre1"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre1"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "t"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Agarre2" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 279, -56 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_u"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre2"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre2"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "u"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Agarre3" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 38, -156 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_v"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre3"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre3"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "v"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Agarre4" type="StaticBody2D" parent="Agarres"]
+position = Vector2( -158, -272 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_d"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre4"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre4"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "d"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Agarre5" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 131, -315 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_o"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre5"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre5"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "o"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Agarre6" type="StaticBody2D" parent="Agarres"]
+position = Vector2( -26, -419 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_h"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre6"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre6"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "h"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Agarre7" type="StaticBody2D" parent="Agarres"]
+position = Vector2( 171, -504 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_y"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre7"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre7"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "y"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Agarre8" type="StaticBody2D" parent="Agarres"]
+position = Vector2( -201, -508 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_r"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre8"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre8"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "r"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Agarre9" type="StaticBody2D" parent="Agarres"]
+position = Vector2( -33, -622 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre9"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre9"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "j"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Agarre10" type="StaticBody2D" parent="Agarres"]
+position = Vector2( -37, -788 )
+collision_layer = 256
+collision_mask = 256
+script = ExtResource( 3 )
+tecla = "tecla_p"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre10"]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.526018, 0.613394 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="Agarres/Agarre10"]
+modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -25.0
+margin_top = -40.0
+margin_right = 30.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+text = "p"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
