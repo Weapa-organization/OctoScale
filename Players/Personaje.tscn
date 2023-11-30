@@ -401,7 +401,7 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabeza"]
 position = Vector2( 0, 1.52588e-05 )
-rotation = -1.5861
+rotation = -1.5708
 scale = Vector2( 0.46589, 0.492686 )
 shape = SubResource( 1 )
 

@@ -8,10 +8,7 @@ var velocity = Vector2()
 func _physics_process(delta):
 	var dir = Vector2()
 	
-	velocity.y += delta * gravity * SPEED
 	
-	if(Input.is_action_just_pressed("ui_up")):
-		dir.y -= 1
 	if(Input.is_action_pressed("ui_left")):
 		dir.x -= 1
 	if(Input.is_action_pressed("ui_right")):
