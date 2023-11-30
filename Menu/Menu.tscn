@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Menu/Menu.tres" type="Theme" id=2]
 [ext_resource path="res://Menu/escenario.tres" type="TileSet" id=3]
+[ext_resource path="res://Music/music_menu.mp3" type="AudioStream" id=4]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -48,6 +49,11 @@ grow_vertical = 2
 focus_neighbour_bottom = NodePath("../SingleplayerButton")
 theme = ExtResource( 2 )
 text = "Quit"
+
+[node name="music_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="SingleplayerButton" to="." method="_on_SingleplayerButton_pressed"]
 [connection signal="pressed" from="MultiplayerButton" to="." method="_on_MultiplayerButton_pressed"]
