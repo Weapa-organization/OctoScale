@@ -12,7 +12,7 @@ func _physics_process(i: float):
 
 func coger_agarre(posicion_agarre: Vector2, agarre: Agarre):
 	self.mode = MODE_STATIC
-	$Tween.targeting_property(self, "global_position", self, "global_position", posicion_agarre, 1, Tween.TRANS_CIRC, Tween.EASE_IN_OUT)
+	$Tween.targeting_property(self, "global_position", self, "global_position", posicion_agarre, 1.3, Tween.TRANS_CIRC, Tween.EASE_IN_OUT)
 	$Tween.start()
 
 func soltar_agarre():
