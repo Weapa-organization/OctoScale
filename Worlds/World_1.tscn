@@ -1,14 +1,40 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assests/UI/BitPotion Full Extended/BitPotionExt.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://p1.png" type="Texture" id=2]
+[ext_resource path="res://assests/Objects/waves/New Project (6).png" type="Texture" id=2]
 [ext_resource path="res://Agarre.gd" type="Script" id=3]
 [ext_resource path="res://Worlds/Fondo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Players/Personaje.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Music/music_world_2.mp3" type="AudioStream" id=6]
+[ext_resource path="res://assests/Objects/waves/New Project (5).png" type="Texture" id=7]
+[ext_resource path="res://assests/Objects/waves/New Project (2).png" type="Texture" id=8]
+[ext_resource path="res://assests/Objects/waves/New Project (4).png" type="Texture" id=9]
+[ext_resource path="res://assests/Objects/waves/New Project (7).png" type="Texture" id=10]
+[ext_resource path="res://assests/Objects/waves/New Project (3).png" type="Texture" id=11]
+[ext_resource path="res://assests/Objects/waves/New Project (1).png" type="Texture" id=12]
+[ext_resource path="res://assests/Objects/waves/New Project (7 - 7).png" type="Texture" id=13]
+[ext_resource path="res://assests/Objects/waves/New Project (7 - 1).png" type="Texture" id=14]
+[ext_resource path="res://assests/Objects/waves/New Project (7 - 4).png" type="Texture" id=15]
+[ext_resource path="res://assests/Objects/waves/New Project (7 - 6).png" type="Texture" id=16]
+[ext_resource path="res://assests/Objects/waves/New Project (7 - 5).png" type="Texture" id=17]
+[ext_resource path="res://assests/Objects/waves/New Project (7 - 2).png" type="Texture" id=18]
+[ext_resource path="res://assests/Objects/waves/New Project (7 - 3).png" type="Texture" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 465, 29 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 46.625, 40.75 )
@@ -20,24 +46,242 @@ font_data = ExtResource( 1 )
 [node name="World_1" type="Node"]
 
 [node name="Personaje" parent="." instance=ExtResource( 5 )]
+position = Vector2( 14.0001, 4 )
 
 [node name="Node2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 14.0001, 4 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 14.0001, 4 )
 collision_layer = 31
 collision_mask = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 13, 163 )
+position = Vector2( -4, 180 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-visible = false
 position = Vector2( 6, 5 )
 scale = Vector2( 1.375, 1.625 )
-texture = ExtResource( 2 )
+hframes = 5
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( 247, 119 )
+scale = Vector2( 7.6875, 7.6875 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( 31.4797, -0.260163 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite10" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( -16, 9.53674e-07 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite11" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( -32, 0.260163 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( 47.3496, -0.260163 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( 16, -0.130082 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( -48, 0.520325 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( -111.74, -0.390245 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 5
+playing = true
+
+[node name="AnimatedSprite7" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( -95.8699, -0.390245 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 4
+playing = true
+
+[node name="AnimatedSprite8" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( -79.8699, -0.390245 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite9" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( -63.8699, -0.780488 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite12" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( 61.6585, 2.73171 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite13" type="AnimatedSprite" parent="StaticBody2D/AnimatedSprite"]
+position = Vector2( -126.439, 0.390244 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+animation = "New Anim"
+frame = 2
+playing = true
+
+[node name="OCEAN" type="AnimatedSprite" parent="StaticBody2D"]
+position = Vector2( -149, 241 )
+scale = Vector2( 7.6875, 7.6875 )
+frames = SubResource( 4 )
+frame = 6
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="3OCEAN1" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( -32.9106, 0.390245 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+frame = 5
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="3OCEAN2" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 48, 0.130081 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+frame = 4
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="3OCEAN" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 123.837, 0.130081 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+frame = 5
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="OCEAN2" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 79.7398, 0.130081 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+frame = 5
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="OCEAN3" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 63.7398, 0.130081 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+frame = 4
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="2OCEAN" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 32, 0 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="2OCEAN2" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 110.829, 0.130081 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="2OCEAN3" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 94.8293, 0.130081 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+frame = 8
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="OCEAN5" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 16, 0 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="OCEAN6" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 129.821, 0.130081 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="OCEAN9" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( 145.041, 0 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="OCEAN10" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( -45.6586, 0.780489 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+frame = 8
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="OCEAN7" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( -26.5366, 0 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
+
+[node name="OCEAN8" type="AnimatedSprite" parent="StaticBody2D/OCEAN"]
+position = Vector2( -15.3496, 0 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 4 )
+playing = true
+offset = Vector2( -31.4797, -0.910568 )
 
 [node name="Agarres" type="Node2D" parent="."]
+position = Vector2( 14.0001, 4 )
 
 [node name="Agarre1" type="StaticBody2D" parent="Agarres"]
 position = Vector2( -45, 11 )
@@ -64,11 +308,11 @@ valign = 1
 uppercase = true
 
 [node name="Agarre2" type="StaticBody2D" parent="Agarres"]
-position = Vector2( 279, -56 )
+position = Vector2( 279, -200 )
 collision_layer = 256
 collision_mask = 256
 script = ExtResource( 3 )
-tecla = "tecla_u"
+tecla = "tecla_e"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre2"]
 position = Vector2( 1, 1 )
@@ -82,7 +326,7 @@ margin_top = -40.0
 margin_right = 30.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 3 )
-text = "u"
+text = "e"
 align = 1
 valign = 1
 uppercase = true
@@ -95,7 +339,7 @@ position = Vector2( 38, -156 )
 collision_layer = 256
 collision_mask = 256
 script = ExtResource( 3 )
-tecla = "tecla_v"
+tecla = "tecla_s"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre3"]
 position = Vector2( 1, 1 )
@@ -109,7 +353,7 @@ margin_top = -40.0
 margin_right = 30.0
 margin_bottom = 34.0
 custom_fonts/font = SubResource( 3 )
-text = "v"
+text = "s"
 align = 1
 valign = 1
 uppercase = true
@@ -285,6 +529,7 @@ shape = SubResource( 2 )
 
 [node name="Label" type="Label" parent="Agarres/Agarre10"]
 modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 0.984314, 0, 1 )
 margin_left = -25.0
 margin_top = -40.0
 margin_right = 30.0

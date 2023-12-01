@@ -16,7 +16,7 @@ func _ready():
 #	pass
 
 func _on_SiguienteNivelButton_pressed():
-	get_tree().change_scene("res://Worlds/World_2.tscn")
+	get_tree().change_scene("res://Worlds/World_1.tscn")
 
 
 func _on_QuitButton_pressed():

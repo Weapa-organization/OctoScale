@@ -1,5 +1,5 @@
 extends StaticBody2D
-class_name Agarre
+class_name Agarre3
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -22,4 +22,4 @@ func _process(_delta):
 		t.start()
 		yield(t, "timeout")
 		t.queue_free()
-		get_tree().change_scene("res://Menu/fin_nivel.tscn")
+		get_tree().change_scene("res://Menu/creditos.tscn")

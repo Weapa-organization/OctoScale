@@ -1,5 +1,5 @@
 extends StaticBody2D
-class_name Agarre
+class_name Agarre2
 
 # Declare member variables here. Examples:
 # var a = 2

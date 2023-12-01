@@ -13,9 +13,21 @@ _global_script_classes=[ {
 "class": "Agarre",
 "language": "GDScript",
 "path": "res://Agarre.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Agarre2",
+"language": "GDScript",
+"path": "res://Agarre2.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Agarre3",
+"language": "GDScript",
+"path": "res://Agarre3.gd"
 } ]
 _global_script_class_icons={
-"Agarre": ""
+"Agarre": "",
+"Agarre2": "",
+"Agarre3": ""
 }
 
 [application]

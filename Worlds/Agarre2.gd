@@ -1,4 +1,4 @@
-extends Control
+extends StaticBody2D
 
 
 # Declare member variables here. Examples:
@@ -8,16 +8,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$SiguienteNivelButton.grab_focus()
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-func _on_SiguienteNivelButton_pressed():
-	get_tree().change_scene("res://Worlds/World_2.tscn")
-
-
-func _on_QuitButton_pressed():
-	get_tree().quit()

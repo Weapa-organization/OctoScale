@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Players/Monillo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assests/Tilesets/tileset_water.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assests/Deco/water_a_8frames.png" type="Texture" id=13]
 [ext_resource path="res://assests/Deco/sun.png" type="Texture" id=14]
 [ext_resource path="res://Music/music_monillo.mp3" type="AudioStream" id=15]
+[ext_resource path="res://Agarre3.gd" type="Script" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -850,25 +851,9 @@ position = Vector2( 0.999939, 1 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 7 )
 
-[node name="Agarre16" type="StaticBody2D" parent="Agarres"]
-position = Vector2( 951, 859 )
-collision_layer = 256
-collision_mask = 256
-script = ExtResource( 4 )
-tecla = "tecla_t"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre16"]
-position = Vector2( 1, 1 )
-scale = Vector2( 0.526018, 0.613394 )
-shape = SubResource( 16 )
-
-[node name="Sprite" type="Sprite" parent="Agarres/Agarre16"]
-position = Vector2( 0.999939, 1 )
-scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 3 )
-
 [node name="Agarre17" type="StaticBody2D" parent="Agarres"]
 position = Vector2( 1124, 826 )
+scale = Vector2( 1, 0.998906 )
 collision_layer = 256
 collision_mask = 256
 script = ExtResource( 4 )
@@ -971,9 +956,11 @@ texture = ExtResource( 7 )
 
 [node name="Agarre23" type="StaticBody2D" parent="Agarres"]
 position = Vector2( 1031, 381 )
+scale = Vector2( 1.01079, 1.00099 )
 collision_layer = 256
 collision_mask = 256
-script = ExtResource( 4 )
+script = ExtResource( 16 )
+is_final = true
 tecla = "tecla_t"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Agarres/Agarre23"]
